@@ -16,7 +16,7 @@ message MakeAdminRequest {
 }
 
 message MakeAdminResponse {
-  string user_id = 1; // Returns User id
+  int64 user_id = 1; // Returns User id
 }
 
 message RegisterRequest {
