@@ -8,6 +8,15 @@ service Auth {
   rpc Register (RegisterRequest) returns (RegisterResponse);
   rpc Login (LoginRequest) returns (LoginResponse);
   rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+  rpc MakeAdmin (MakeAdminRequest) returns (MakeAdminResponse);
+}
+
+message MakeAdminRequest {
+  string user_id = 1; // User ID of the user
+}
+
+message MakeAdminResponse {
+  string user_id = 1; // Returns User id
 }
 
 message RegisterRequest {
@@ -30,7 +39,7 @@ message LoginResponse {
 }
 
 message IsAdminRequest {
-  int64 user_id = 1; // User ID to validateprotoc --version
+  int64 user_id = 1; // User ID to validate protoc --version
 }
 
 message IsAdminResponse {
