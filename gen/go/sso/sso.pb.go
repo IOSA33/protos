@@ -67,7 +67,7 @@ func (x *MakeAdminRequest) GetUserId() string {
 
 type MakeAdminResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"` // Returns User id
+	UserId        int64                  `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"` // Returns User id
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -102,11 +102,11 @@ func (*MakeAdminResponse) Descriptor() ([]byte, []int) {
 	return file_sso_sso_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *MakeAdminResponse) GetUserId() string {
+func (x *MakeAdminResponse) GetUserId() int64 {
 	if x != nil {
 		return x.UserId
 	}
-	return ""
+	return 0
 }
 
 type RegisterRequest struct {
@@ -405,7 +405,7 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\x10MakeAdminRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\",\n" +
 	"\x11MakeAdminResponse\x12\x17\n" +
-	"\auser_id\x18\x01 \x01(\tR\x06userId\"C\n" +
+	"\auser_id\x18\x01 \x01(\x03R\x06userId\"C\n" +
 	"\x0fRegisterRequest\x12\x14\n" +
 	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\"+\n" +
