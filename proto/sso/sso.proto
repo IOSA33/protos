@@ -11,14 +11,6 @@ service Auth {
   rpc MakeAdmin (MakeAdminRequest) returns (MakeAdminResponse);
 }
 
-message MakeAdminRequest {
-  int64 user_id = 1; // User ID of the user
-}
-
-message MakeAdminResponse {
-  int64 user_id = 1; // Returns User id
-}
-
 message RegisterRequest {
   string email = 1; // Email of the user to register
   string password = 2; // Password of the user to register
@@ -44,4 +36,12 @@ message IsAdminRequest {
 
 message IsAdminResponse {
   bool is_admin = 1; // Validates whether the user is an admin
+}
+
+message MakeAdminRequest {
+  int64 user_id = 1; // User ID of the user
+}
+
+message MakeAdminResponse {
+  int64 make_admin = 1; // Returns User id
 }
